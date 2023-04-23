@@ -17,6 +17,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -108,18 +109,22 @@ select {
   --pad-xxl: 3em;
 }
 
-body {
+main {
   font-family: "League Spartan", sans-serif;
-}
-
-.bg-top {
   position: relative;
+  border: 1px solid transparent;
 }
-.bg-top img {
+main .bg-top {
   position: absolute;
-  content: "";
+  background-size: cover;
   top: 0;
   left: 0;
+}
+main .bg-bottom {
+  position: absolute;
+  background-size: cover;
+  bottom: 0;
+  right: 0;
 }
 
 .container {

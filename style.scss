@@ -8,21 +8,24 @@
 
 
 
-body {
+main {
     font-family: $ff;
-};
-
-.bg-top {
     position: relative;
-    img{
+    border: 1px solid transparent;
+
+    .bg-top {
         position: absolute;
-        content: '';
+        background-size: cover;
         top: 0;
         left: 0;
-        // width: 30rem;
-        // transform: translate(50%, 50%);
     }
-}
+    .bg-bottom {
+        position: absolute;
+        background-size: cover;
+        bottom: 0;
+        right: 0;
+    }
+};
 
 .container {
     margin: 7em 10em;
