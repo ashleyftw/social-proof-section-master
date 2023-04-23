@@ -356,4 +356,8 @@ body .bg-bottom {
   .reviews .card:nth-of-type(3) {
     margin-top: 0;
   }
+}
+
+footer {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
