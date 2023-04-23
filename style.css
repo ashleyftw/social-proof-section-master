@@ -112,19 +112,16 @@ select {
 body {
   font-family: "League Spartan", sans-serif;
   position: relative;
-  border: 1px solid transparent;
+  background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
 }
-body .bg-top {
-  position: absolute;
-  background-size: cover;
-  top: 0;
-  left: 0;
-}
-body .bg-bottom {
-  position: absolute;
-  background-size: cover;
-  bottom: 0;
-  right: 0;
+@media (max-width: 1000px) {
+  body {
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+  }
 }
 
 .container {

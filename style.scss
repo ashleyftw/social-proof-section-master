@@ -11,19 +11,29 @@
 body {
     font-family: $ff;
     position: relative;
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
 
-    .bg-top {
-        position: absolute;
-        background-size: cover;
-        top: 0;
-        left: 0;
-    }
-    .bg-bottom {
-        position: absolute;
-        background-size: cover;
-        bottom: 0;
-        right: 0;
+    // .bg-top {
+    //     position: absolute;
+    //     background-size: cover;
+    //     top: 0;
+    //     left: 0;
+    // }
+    // .bg-bottom {
+    //     position: absolute;
+    //     background-size: cover;
+    //     bottom: 0;
+    //     right: 0;
+    // }
+
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+
+    @media (max-width:1000px) {
+        background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: top left, bottom right;
     }
 };
 
