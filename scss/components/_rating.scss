@@ -1,0 +1,9 @@
+@use '../abstracts/mixins' as *;
+
+@mixin rating {
+    @include f-row;
+    padding: var(--pad-sm) var(--pad-xl) var(--pad-sm) var(--pad-md);
+    h2 {
+        font-weight: var(--fw-bold);
+    }
+};

@@ -1,0 +1,37 @@
+@use '../abstracts/mixins' as *;
+
+@mixin card {
+    background-color: var(--clr-primary-vd-ma);
+    border-radius: 0.5rem;
+    padding: var(--pad-base) var(--pad-lg);
+    color: white;
+    .card__profile {
+        @include f-row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.5em;
+        padding: var(--pad-base) 0;
+    }
+        .card__author {
+            @include f-col;
+        }
+    img {
+        border-radius: 50%;
+        border-style: none;
+        width: 40px;
+        height: 40px;
+    }
+    h3 {
+        font-size: var(--fs-base);
+        letter-spacing: 0.05rem;
+    }
+    h4 {
+        color: var(--clr-primary-s-p);
+        font-size: var(--fs-base);
+        font-weight: var(--fw-base);
+    }
+    p {
+        color: var(--clr-neutral-lt-gr-ma);
+        padding: var(--pad-sm) 0;
+    }
+};

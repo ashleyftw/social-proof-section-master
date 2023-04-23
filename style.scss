@@ -1,0 +1,103 @@
+@use 'scss/base/reset' as *;
+@use 'scss/base/colors' as *;
+@use 'scss/base/typography' as *;
+@use 'scss/base/spacer' as *;
+@use 'scss/abstracts/mixins' as *;
+@use 'scss/components/card' as *;
+@use 'scss/components/rating' as *;
+
+
+
+body {
+    font-family: $ff;
+};
+
+.bg-top {
+    position: relative;
+    img{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        // width: 30rem;
+        // transform: translate(50%, 50%);
+    }
+}
+
+.container {
+    margin: 7em 10em;
+};
+
+.hero-ratings {
+    @include f-row;
+    justify-content: space-between;
+    margin-bottom: 4em;
+}
+
+.hero {
+    max-width: 40%;
+    h1 {
+        color: var(--clr-primary-vd-ma);
+        font-size: 3.4rem;
+        line-height: 0.9;
+        margin-bottom: var(--mar-sm);
+    }
+    p {
+        color: var(--clr-neutral-dk-gr-ma);
+        font-size: var(--fs-md);
+    }
+}
+
+.ratings {
+    margin-top: var(--mar-lg);
+    @include f-col();
+    gap: 1rem;
+
+    .rating {
+        @include f-row();
+        padding: var(--pad-base) var(--pad-xxl) var(--pad-base) var(--pad-lg);
+        background-color: var(--clr-neutral-lt-gr-ma);
+        border-radius: 0.5rem;
+
+        &:nth-of-type(1) {
+            margin-right: 6em;
+        }
+        &:nth-of-type(2) {
+            margin-left: var(--mar-xxl);
+            margin-right: var(--mar-xxl);
+        }
+        &:nth-of-type(3) {
+            margin-left: 6em;
+        }
+
+        img {
+            display: inline;
+            padding: 0.2em;
+            object-fit: contain;
+        }
+        h2 {
+            font-size: var(--fs-md);
+            margin-left: 2rem;
+            color: var(--clr-primary-vd-ma)
+        }
+    }
+}
+
+.reviews {
+    @include f-row;
+    gap: 2em;
+    .card {
+        @include card;
+
+        &:nth-of-type(1) {
+            margin-bottom: var(--mar-lg);
+        }
+        &:nth-of-type(2) {
+            margin-top: var(--mar-base);
+            margin-bottom: var(--mar-base);
+        }
+        &:nth-of-type(3) {
+            margin-top: var(--mar-lg);
+        }
+    }
+}

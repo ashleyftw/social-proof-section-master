@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap"); /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --clr-primary-vd-ma: hsl(300, 43%, 22%);
+  --clr-primary-s-p: hsl(333, 80%, 67%);
+  --clr-neutral-dk-gr-ma: hsl(303, 10%, 53%);
+  --clr-neutral-lt-gr-ma: hsl(300, 24%, 96%);
+  --clr-neutral-wt: hsl(0, 0%, 100%);
+}
+
+:root {
+  --fs-sm: 0.5rem;
+  --fs-base: 15px;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 1.75rem;
+  --fs-xxl: 2rem;
+  --fs-xxxl: 2.5rem;
+  --fw-base: 400;
+  --fw-md: 500;
+  --fw-bold: 700;
+}
+
+:root {
+  --mar-sm: 0.5em;
+  --mar-base: 1em;
+  --mar-md: 1.5em;
+  --mar-lg: 2em;
+  --mar-xl: 2.5em;
+  --mar-xxl: 3em;
+  --pad-sm: 0.5em;
+  --pad-base: 1em;
+  --pad-md: 1.5em;
+  --pad-lg: 2em;
+  --pad-xl: 2.5em;
+  --pad-xxl: 3em;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+}
+
+.bg-top {
+  position: relative;
+}
+.bg-top img {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+}
+
+.container {
+  margin: 7em 10em;
+}
+
+.hero-ratings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4em;
+}
+
+.hero {
+  max-width: 40%;
+}
+.hero h1 {
+  color: var(--clr-primary-vd-ma);
+  font-size: 3.4rem;
+  line-height: 0.9;
+  margin-bottom: var(--mar-sm);
+}
+.hero p {
+  color: var(--clr-neutral-dk-gr-ma);
+  font-size: var(--fs-md);
+}
+
+.ratings {
+  margin-top: var(--mar-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ratings .rating {
+  display: flex;
+  flex-direction: row;
+  padding: var(--pad-base) var(--pad-xxl) var(--pad-base) var(--pad-lg);
+  background-color: var(--clr-neutral-lt-gr-ma);
+  border-radius: 0.5rem;
+}
+.ratings .rating:nth-of-type(1) {
+  margin-right: 6em;
+}
+.ratings .rating:nth-of-type(2) {
+  margin-left: var(--mar-xxl);
+  margin-right: var(--mar-xxl);
+}
+.ratings .rating:nth-of-type(3) {
+  margin-left: 6em;
+}
+.ratings .rating img {
+  display: inline;
+  padding: 0.2em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.ratings .rating h2 {
+  font-size: var(--fs-md);
+  margin-left: 2rem;
+  color: var(--clr-primary-vd-ma);
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+.reviews .card {
+  background-color: var(--clr-primary-vd-ma);
+  border-radius: 0.5rem;
+  padding: var(--pad-base) var(--pad-lg);
+  color: white;
+}
+.reviews .card .card__profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5em;
+  padding: var(--pad-base) 0;
+}
+.reviews .card .card__author {
+  display: flex;
+  flex-direction: column;
+}
+.reviews .card img {
+  border-radius: 50%;
+  border-style: none;
+  width: 40px;
+  height: 40px;
+}
+.reviews .card h3 {
+  font-size: var(--fs-base);
+  letter-spacing: 0.05rem;
+}
+.reviews .card h4 {
+  color: var(--clr-primary-s-p);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-base);
+}
+.reviews .card p {
+  color: var(--clr-neutral-lt-gr-ma);
+  padding: var(--pad-sm) 0;
+}
+.reviews .card:nth-of-type(1) {
+  margin-bottom: var(--mar-lg);
+}
+.reviews .card:nth-of-type(2) {
+  margin-top: var(--mar-base);
+  margin-bottom: var(--mar-base);
+}
+.reviews .card:nth-of-type(3) {
+  margin-top: var(--mar-lg);
+}/*# sourceMappingURL=style.css.map */

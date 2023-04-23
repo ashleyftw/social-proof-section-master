@@ -1,0 +1,19 @@
+$colors: (
+    primary: (
+        vd-ma: hsl(300, 43%, 22%),
+        s-p: hsl(333, 80%, 67%)
+    ),
+    neutral: (
+        dk-gr-ma: hsl(303, 10%, 53%),
+        lt-gr-ma: hsl(300, 24%, 96%),
+        wt: hsl(0, 0%, 100%)
+    )
+);
+
+:root {
+    @each $cat, $val in $colors {
+        @each $name, $clr in $val {
+            --clr-#{$cat}-#{$name}: #{$clr};
+        }
+    }
+};

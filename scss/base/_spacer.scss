@@ -1,0 +1,26 @@
+$mar: (
+    sm: 0.5em,
+    base: 1em,
+    md: 1.5em,
+    lg: 2em,
+    xl: 2.5em,
+    xxl: 3em
+);
+
+$pad: (
+    sm: 0.5em,
+    base: 1em,
+    md: 1.5em,
+    lg: 2em,
+    xl: 2.5em,
+    xxl: 3em
+);
+
+:root {
+    @each $key, $val in $mar {
+        --mar-#{$key}: #{$val};
+    }
+    @each $key, $val in $pad {
+        --pad-#{$key}: #{$val};
+    }
+}

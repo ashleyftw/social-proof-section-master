@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+//font-family
+$ff: 'League Spartan', sans-serif;
+
+//font-size
+$fs: (
+    sm: 0.5rem,
+    base: 15px,
+    md: 1.125rem,
+    lg: 1.5rem,
+    xl: 1.75rem,
+    xxl: 2rem,
+    xxxl: 2.5rem
+);
+
+//font-weight
+$fw: (
+    base: 400,
+    md: 500,
+    bold: 700
+);
+
+:root {
+    @each $key, $val in $fs {
+        --fs-#{$key}: #{$val};
+    }
+    @each $key, $val in $fw {
+        --fw-#{$key}: #{$val};
+    }
+};
