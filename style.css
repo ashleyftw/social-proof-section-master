@@ -109,18 +109,18 @@ select {
   --pad-xxl: 3em;
 }
 
-main {
+body {
   font-family: "League Spartan", sans-serif;
   position: relative;
   border: 1px solid transparent;
 }
-main .bg-top {
+body .bg-top {
   position: absolute;
   background-size: cover;
   top: 0;
   left: 0;
 }
-main .bg-bottom {
+body .bg-bottom {
   position: absolute;
   background-size: cover;
   bottom: 0;
@@ -130,12 +130,25 @@ main .bg-bottom {
 .container {
   margin: 7em 10em;
 }
+@media (max-width: 1000px) {
+  .container {
+    margin: var(--mar-md);
+  }
+}
 
 .hero-ratings {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 4em;
+}
+@media (max-width: 1000px) {
+  .hero-ratings {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 3em;
+  }
 }
 
 .hero {
@@ -150,6 +163,19 @@ main .bg-bottom {
 .hero p {
   color: var(--clr-neutral-dk-gr-ma);
   font-size: var(--fs-md);
+}
+@media (max-width: 1000px) {
+  .hero {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero h1 {
+    margin-top: var(--mar-md);
+    font-size: 2.25rem;
+    line-height: 0.8;
+    padding: 0 var(--pad-base);
+  }
 }
 
 .ratings {
@@ -185,6 +211,36 @@ main .bg-bottom {
   font-size: var(--fs-md);
   margin-left: 2rem;
   color: var(--clr-primary-vd-ma);
+}
+@media (max-width: 1250px) {
+  .ratings .rating {
+    padding: 0;
+    margin-top: var(--mar-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7em;
+    width: 100%;
+  }
+  .ratings .rating__stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .ratings .rating__stars img {
+    width: 1.5rem;
+  }
+  .ratings .rating h2 {
+    font-size: 1.025rem;
+    margin: 0;
+  }
+  .ratings .rating:nth-of-type(2) {
+    margin: 0;
+  }
+  .ratings .rating:nth-of-type(3) {
+    margin: 0;
+  }
 }
 
 .reviews {
@@ -238,4 +294,66 @@ main .bg-bottom {
 }
 .reviews .card:nth-of-type(3) {
   margin-top: var(--mar-lg);
+}
+@media (max-width: 1000px) {
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .reviews .card {
+    background-color: var(--clr-primary-vd-ma);
+    border-radius: 0.5rem;
+    padding: var(--pad-base) var(--pad-lg);
+    color: white;
+    padding: 0 var(--pad-xl);
+    margin-bottom: 3em;
+  }
+  .reviews .card .card__profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5em;
+    padding: var(--pad-base) 0;
+  }
+  .reviews .card .card__author {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviews .card img {
+    border-radius: 50%;
+    border-style: none;
+    width: 40px;
+    height: 40px;
+  }
+  .reviews .card h3 {
+    font-size: var(--fs-base);
+    letter-spacing: 0.05rem;
+  }
+  .reviews .card h4 {
+    color: var(--clr-primary-s-p);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-base);
+  }
+  .reviews .card p {
+    color: var(--clr-neutral-lt-gr-ma);
+    padding: var(--pad-sm) 0;
+  }
+  .reviews .card__profile {
+    margin-top: var(--mar-md);
+  }
+  .reviews .card p {
+    margin-bottom: var(--mar-base);
+  }
+  .reviews .card:nth-of-type(1) {
+    margin-bottom: 0;
+  }
+  .reviews .card:nth-of-type(2) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .reviews .card:nth-of-type(3) {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
